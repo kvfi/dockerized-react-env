@@ -9,7 +9,7 @@ React compiles environment variables directly into the page which goes against t
 ## How does it work?
 
 ### Requirements
-* A file named `.env` shoud be created containing all environement variables names with default. This file can be checked out as it should not contain condidential no secret information.
+* A file named `.env` shoud be created containing all environement variables names with default. This file can be checked out as it should not contain confidential nor secret information.
 * You should add `<script src="%PUBLIC_URL%/env.js"></script>` to `public/index.html` so the file can be picked up during the build time.
 
 1. A bash script (`env.sh`) reads `.env` and creates a new `env.js` that injects the `window._env_` variable, which is then read by the code.

@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started
 
 This project showcases a simple use of environement variables for a dockerized React application.
 
@@ -12,4 +12,5 @@ React compiles environment variables directly into the page which goes against t
 * A file named `.env` shoud be created containing all environement variables names with default. This file can be checked out as it should not contain condidential no secret information.
 * You should add `<script src="%PUBLIC_URL%/env.js"></script>` to `public/index.html` so the file can be picked up during the build time.
 
-1. A bash script (`env.sh`) read `.env` create a new `env.js` that injects the `window._env_` variable, which is read by the code.
+1. A bash script (`env.sh`) reads `.env` and creates a new `env.js` that injects the `window._env_` variable, which is then read by the code.
+2. Docker -e options and docker-compose `environment` are then passed to the `window` object.
